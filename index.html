@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Dev Portfolio World</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- START -->
+
+<div id="start">
+
+    <h1>SUPER DEV WORLD</h1>
+
+    <p style="margin-top:30px; line-height:2;">
+        PLAY MY INTERACTIVE PORTFOLIO GAME<br><br>
+        COLLECT ALL COINS<br>
+        AVOID ENEMIES<br><br>
+        MOVE → ←<br>
+        JUMP SPACE
+    </p>
+
+    <button onclick="startGame()">
+        START GAME
+    </button>
+
+</div>
+
+<!-- UI -->
+
+<div id="ui">
+    COINS: <span id="coins">0</span><br>
+    WORLD: DEV-1
+</div>
+
+<!-- CONTACT POPUP -->
+
+<div id="contactPopup">
+
+    <div class="popup-box">
+
+        <h1>MISSION COMPLETE 🚀</h1>
+
+        <p>
+            YOU COMPLETED THE PORTFOLIO WORLD.<br><br>
+            SEND YOUR QUERY OR PROJECT REQUEST.
+        </p>
+
+        <input type="text" placeholder="YOUR NAME">
+
+        <input type="email" placeholder="YOUR EMAIL">
+
+        <textarea placeholder="YOUR MESSAGE"></textarea>
+
+        <button onclick="submitForm()">
+            SEND MESSAGE
+        </button>
+
+    </div>
+
+</div>
+
+<!-- WORLD -->
+
+<div id="world">
+
+    <div class="sun"></div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <div class="mountain" style="left:200px;"></div>
+    <div class="mountain" style="left:2200px;"></div>
+    <div class="mountain" style="left:5000px;"></div>
+
+    <div class="ground"></div>
+
+    <!-- PLAYER -->
+
+    <div id="player">
+
+        <div class="cap"></div>
+        <div class="face"></div>
+        <div class="body"></div>
+        <div class="legs"></div>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <div class="panel" style="left:700px; bottom:180px;">
+
+        <h1>ABOUT ME</h1>
+
+        <p>
+            CREATIVE FRONTEND DEVELOPER<br><br>
+            I BUILD 3D WEBSITES,
+            GAME UI,
+            INTERACTIVE EXPERIENCES,
+            AND SMOOTH ANIMATIONS.
+        </p>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="panel" style="left:2300px; bottom:180px;">
+
+        <h1>SKILLS</h1>
+
+        <div class="skills">
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JAVASCRIPT</div>
+            <div class="skill">REACT</div>
+            <div class="skill">Node JS</div>
+            <div class="skill">Express JS</div>
+            <div class="skill">NEXT JS</div>
+            <div class="skill">UI/UX</div>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECTS -->
+
+    <div class="panel" style="left:4700px; bottom:180px;">
+
+        <h1>PROJECTS</h1>
+
+        <div class="project">3D GAME WEBSITE</div>
+
+        <div class="project">CYBERPUNK UI EXPERIENCE</div>
+
+        <div class="project">INTERACTIVE DASHBOARD</div>
+
+        <div class="project">AI PORTFOLIO PLATFORM</div>
+
+    </div>
+
+    <!-- CONTACT -->
+
+    <div class="panel" style="left:7000px; bottom:180px;">
+
+        <h1>CONTACT</h1>
+
+        <p>
+            EMAIL:<br>
+            hello@developer.com<br><br>
+
+            GITHUB:<br>
+            github/dev<br><br>
+
+            INSTAGRAM:<br>
+            @developer
+        </p>
+
+    </div>
+
+    <!-- BLOCKS -->
+
+    <div class="block" style="left:1500px; bottom:300px;"></div>
+
+    <div class="block" style="left:3400px; bottom:350px;"></div>
+
+    <div class="block" style="left:5600px; bottom:320px;"></div>
+
+    <!-- COINS -->
+
+    <div class="coin" style="left:1550px; bottom:420px;"></div>
+
+    <div class="coin" style="left:3450px; bottom:470px;"></div>
+
+    <div class="coin" style="left:5650px; bottom:430px;"></div>
+
+    <div class="coin" style="left:6400px; bottom:250px;"></div>
+
+    <div class="coin" style="left:7800px; bottom:260px;"></div>
+
+    <!-- ENEMIES -->
+
+    <div class="enemy" style="left:1900px; bottom:120px;"></div>
+
+    <div class="enemy" style="left:4200px; bottom:120px;"></div>
+
+    <div class="enemy" style="left:6000px; bottom:120px;"></div>
+
+    <div class="enemy" style="left:7600px; bottom:120px;"></div>
+
+    <!-- FLAG -->
+
+    <div id="flag">
+
+        <div class="flag-top"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
