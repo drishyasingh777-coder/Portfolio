@@ -1,1 +1,1 @@
-gaming portfolio
+gaming-portfolio
