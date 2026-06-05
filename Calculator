@@ -1,0 +1,91 @@
+from tkinter import *
+
+# Window
+root = Tk()
+root.title("Aesthetic Calculator")
+root.geometry("360x520")
+root.configure(bg="#1e1e2f")
+root.resizable(False, False)
+
+# Entry box
+entry = Entry(
+    root,
+    width=15,
+    font=("Poppins", 30),
+    bg="#2b2b3c",
+    fg="white",
+    borderwidth=0,
+    justify="right"
+)
+
+entry.pack(pady=25, padx=20, ipady=15, fill="both")
+
+# Functions
+def click(value):
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, current + str(value))
+
+def clear():
+    entry.delete(0, END)
+
+def equal():
+    try:
+        result = eval(entry.get())
+        entry.delete(0, END)
+        entry.insert(0, result)
+    except:
+        entry.delete(0, END)
+        entry.insert(0, "Error")
+
+# Button style
+button_font = ("Poppins", 16)
+button_bg = "#3b3b55"
+button_fg = "white"
+operator_bg = "#ff8c42"
+
+# Frame for buttons
+frame = Frame(root, bg="#1e1e2f")
+frame.pack()
+
+# Button creator
+def make_button(text, row, col, command, bg=button_bg):
+    Button(
+        frame,
+        text=text,
+        width=5,
+        height=2,
+        font=button_font,
+        bg=bg,
+        fg=button_fg,
+        activebackground="#5c5c7a",
+        activeforeground="white",
+        borderwidth=0,
+        command=command
+    ).grid(row=row, column=col, padx=8, pady=8)
+
+# Row 1
+make_button("7", 0, 0, lambda: click("7"))
+make_button("8", 0, 1, lambda: click("8"))
+make_button("9", 0, 2, lambda: click("9"))
+make_button("/", 0, 3, lambda: click("/"), operator_bg)
+
+# Row 2
+make_button("4", 1, 0, lambda: click("4"))
+make_button("5", 1, 1, lambda: click("5"))
+make_button("6", 1, 2, lambda: click("6"))
+make_button("*", 1, 3, lambda: click("*"), operator_bg)
+
+# Row 3
+make_button("1", 2, 0, lambda: click("1"))
+make_button("2", 2, 1, lambda: click("2"))
+make_button("3", 2, 2, lambda: click("3"))
+make_button("-", 2, 3, lambda: click("-"), operator_bg)
+
+# Row 4
+make_button("C", 3, 0, clear, "#ff4d6d")
+make_button("0", 3, 1, lambda: click("0"))
+make_button("=", 3, 2, equal, "#4cc9f0")
+make_button("+", 3, 3, lambda: click("+"), operator_bg)
+
+root.mainloop()
